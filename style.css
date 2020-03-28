@@ -1,0 +1,52 @@
+  body {
+    margin: 0;
+  }
+  
+  .board {
+    width: 100vw;
+    height: 68vh;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto)
+  }
+
+  .status {
+    width: 100vw;
+    height: 5vh;
+    margin-top: 86px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+
+  }
+
+  .cell {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    border: 2.2px solid black;
+    border-radius: 10%;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* REMOVE BOARD OUTER BORDER*/
+  .cell:first-child, .cell:nth-child(2), .cell:nth-child(3) {border-top: none;}
+  .cell:last-child, .cell:nth-child(8), .cell:nth-child(7) {border-bottom: none;}
+  .cell:nth-child(3n + 1) {border-left: none;}
+  .cell:nth-child(3n + 3) {border-right: none;}
+
+  .status2 {
+    width: 100vw;
+    height: 5vh;
+    margin-bottom: 86px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+  }
+  
