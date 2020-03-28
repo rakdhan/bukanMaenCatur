@@ -7,7 +7,7 @@ var matrix = [
     [-4, -5, -6],
     [-7, -8, -9],
 ]
-var backSound = new Audio("./262839__pc2752__footprints-guitar.wav");
+var backSound = new Audio("./audio/262839__pc2752__footprints-guitar.wav");
 function whatToFill(mark, row, col) {
     backSound.loop = true
     backSound.volume = 0.3;
