@@ -46,12 +46,12 @@ function whatToFill(mark, row, col) {
     if (win != 0) {
         if (win == 1) win = 'X';
         if (win == 2) win = 'Ø';
-        document.getElementById('status').innerHTML= `Game over. ${win} wins!`
-        document.getElementById('status2').innerHTML= `Revenge? ⌘R`
+        document.getElementById('status').innerHTML= `Game óver. ${win} wins!`
+        document.getElementById('status2').innerHTML= `Revanche? ⌘R`
     }
     else if (counter == 9) {
-        document.getElementById('status').innerHTML= `Meh. Nobody wins.`
-        document.getElementById('status2').innerHTML= `Poor child. Feel free to ⌘R`
+        document.getElementById('status').innerHTML= `Pas de victoires. Nobody wins.`
+        document.getElementById('status2').innerHTML= `Décevant. Feel free to ⌘R`
     }
 }
 
