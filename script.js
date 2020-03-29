@@ -1,13 +1,17 @@
 
-var turn = 1
 var counter = 0
+var turn = 1
 var win = 0
 var matrix = [
     [-1, -2, -3],
     [-4, -5, -6],
     [-7, -8, -9],
 ]
+
 var backSound = new Audio("./audio/262839__pc2752__footprints-guitar.wav");
+var restartButton = document.getElementById("restartButton")
+whatToFill()
+restartButton.addEventListener('click', whatToFill)
 function whatToFill(mark, row, col) {
     backSound.loop = true
     backSound.volume = 0.3;
@@ -47,12 +51,10 @@ function whatToFill(mark, row, col) {
         if (win == 1) win = 'X';
         if (win == 2) win = 'Ø';
         document.getElementById('status').innerHTML= `Game óver. ${win} wins!`
-        document.getElementById('status2').innerHTML= `Revanche? ⌘R`
+        document.getElementById('status2').innerHTML= ` Revanche ?`
     }
     else if (counter == 9) {
         document.getElementById('status').innerHTML= `Pas de victoires. Nobody wins.`
-        document.getElementById('status2').innerHTML= `Décevant. Feel free to ⌘R`
+        document.getElementById('status2').innerHTML= `Décevant. Try below,`
     }
 }
-
-
